@@ -185,11 +185,11 @@ p {
     z-index: 1; /* 確保放大時不被遮蓋 */
 }
 
+/* 統一卡片內圖片大小 */
 .equipment-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-height: 300px;
+    width: 100%; /* 確保圖片的寬度佔滿卡片寬度 */
+    height: 250px; /* 統一圖片高度 */
+    object-fit: cover; /* 圖片等比例裁切，保持展示效果一致 */
     transition: transform 0.3s ease; /* 平滑的過渡效果 */
 }
 
