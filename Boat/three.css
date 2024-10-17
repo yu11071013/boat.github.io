@@ -1,0 +1,380 @@
+/* 全局樣式 */
+* { 
+    margin: 0; /* 清除元素的外邊距 */
+    padding: 0; /* 清除元素的內邊距 */
+    box-sizing: border-box; /* 包括邊框和內邊距在內的元素尺寸計算 */
+}  
+
+/* 設定主體的樣式 */
+body {
+    font-family: Arial, sans-serif; /* 設定字型為 Arial，若無則使用 sans-serif */
+    background-color: #f4f4f4; /* 設定背景顏色 */
+    color: #333; /* 設定文字顏色 */
+    text-align: center; /* 文字置中 */
+}
+
+/* Header 樣式 */
+header {
+    position: relative; /* 設定為相對定位 */
+    width: 100%; /* 寬度為 100% */
+    max-width: 100%; /* 最大寬度為 100% */
+    overflow: hidden; /* 隱藏溢出部分 */
+}
+
+/* 導覽列樣式 */
+.navbar {
+    display: flex; /* 使用彈性佈局 */
+    justify-content: space-between; /* 在主軸上平均分配空間 */
+    align-items: center; /* 在交叉軸上居中對齊 */
+    padding: 20px 40px; /* 上下內邊距 20px，左右內邊距 40px */
+    background-color: #00274d; /* 背景顏色 */
+    color: white; /* 文字顏色 */
+    position: sticky; /* 固定在視窗上方 */
+    top: 0; /* 當前元素在距離視窗頂部 0 的位置時保持固定 */
+    z-index: 10; /* 提高堆疊順序 */
+}
+
+.logo img {
+    width: 330px; /* 設定 logo 圖片的寬度 */
+}
+
+/* 導覽鏈結樣式 */
+.nav-links {
+    list-style-type: none; /* 清除列表項目的標記 */
+    display: flex; /* 使用彈性佈局 */
+}
+
+.nav-links li {
+    margin: 0 20px; /* 設定每個列表項的左右邊距 */
+}
+
+.nav-links a {
+    text-decoration: none; /* 移除鏈結的下劃線 */
+    color: white; /* 設定文字顏色 */
+    font-weight: bold; /* 設定文字為粗體 */
+    font-size: 32px; /* 設定字體大小 */
+    transition: color 0.3s; /* 設定顏色變化的過渡效果 */
+}
+
+.nav-links a:hover {
+    color: #f9a825; /* 滑鼠懸停時改變顏色 */
+}
+
+/* 按鈕樣式 */
+.nav-links .btn {
+    background-color: #007bff; /* 按鈕背景顏色 */
+    padding: 16px 24px; /* 上下內邊距 16px，左右內邊距 24px */
+    border-radius: 5px; /* 圓角邊框 */
+    font-size: 32px; /* 字體大小 */
+}
+
+.nav-links .btn:hover {
+    background-color: #0056b3; /* 滑鼠懸停時改變背景顏色 */
+}
+
+/* 輪播圖樣式 */
+.slideshow-container {
+    position: relative; /* 相對定位 */
+    width: 100%; /* 寬度 100% */
+    height: 70vh; /* 高度為視窗高度的 70% */
+    overflow: hidden; /* 隱藏溢出部分 */
+}
+
+.slides {
+    display: none; /* 隱藏所有幻燈片 */
+    position: absolute; /* 絕對定位 */
+    width: 100%; /* 寬度 100% */
+    height: 100%; /* 高度 100% */
+}
+
+.slides img {
+    width: 100%; /* 圖片寬度 100% */
+    height: 100%; /* 圖片高度 100% */
+    object-fit: cover; /* 保持比例填滿容器 */
+    filter: brightness(80%); /* 調整圖片亮度 */
+}
+
+/* 滑動效果 */
+.fade-in {
+    animation: fadeInEffect 3s ease-in-out forwards; /* 添加淡入動畫 */
+}
+
+@keyframes fadeInEffect {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 每張圖片的文字樣式 */
+.slide-text {
+    position: absolute; /* 絕對定位 */
+    width: 100%; /* 寬度 100% */
+    top: 50%; /* 垂直置中 */
+    left: 50%; /* 水平置中 */
+    transform: translate(-50%, -50%); /* 將元素移動到中心 */
+    background-color: rgba(0, 0, 0, 0.5); /* 背景顏色及透明度 */
+    color: #f9a825; /* 文字顏色 */
+    padding: 20px 40px; /* 上下內邊距 20px，左右內邊距 40px */
+    font-size: 48px; /* 字體大小 */
+    font-weight: bold; /* 字體加粗 */
+    border-radius: 12px; /* 圓角邊框 */
+    text-align: center; /* 文字置中 */
+}
+
+/* main 的淡入動畫 */
+@keyframes mainFadeIn {
+    from { opacity: 0; transform: translateY(20px); } /* 動畫開始時透明度為 0，向下移動 20px */
+    to { opacity: 1; transform: translateY(0); } /* 動畫結束時透明度為 1，移動到原位 */
+}
+
+main {
+    padding: 40px 10px; /* 上下內邊距 40px，左右內邊距 10px */
+    background-color: #fff; /* 背景顏色 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    margin-top: 20px; /* 上邊距 */
+    animation: mainFadeIn 1s ease-in-out; /* 添加動畫效果 */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main.fade-in {
+    animation: fadeIn 1s ease-in-out; /* 添加淡入動畫 */
+}
+
+
+
+/* 專案展示區塊樣式 */
+#projects {
+    padding: 50px; /* 上下左右內邊距 50px */
+}
+
+.project {
+    display: flex; /* 使用彈性佈局 */
+    margin-bottom: 40px; /* 下邊距 */
+    border-bottom: 1px solid #ddd; /* 下邊框 */
+    padding-bottom: 20px; /* 下內邊距 */
+}
+
+.project img {
+    width: 40%; /* 圖片寬度 40% */
+    height: auto; /* 自動高度 */
+    margin-right: 20px; /* 右邊距 */
+}
+
+.project-info {
+    display: flex; /* 使用彈性佈局 */
+    align-items: center; /* 垂直居中對齊 */
+}
+
+.project-info .date {
+    margin-right: 20px; /* 右邊距 */
+    text-align: center; /* 文字置中 */
+    font-size: 1.2em; /* 字體大小 */
+}
+
+.project-info .date h3 {
+    font-size: 3em; /* 大標題字體大小 */
+    color: #333; /* 文字顏色 */
+}
+
+.project-info .date p {
+    font-size: 0.9em; /* 小標題字體大小 */
+    color: #666; /* 文字顏色 */
+}
+
+.project-info .description h4 {
+    font-size: 1.5em; /* 專案描述字體大小 */
+    color: #333; /* 文字顏色 */
+    margin: 0; /* 清除外邊距 */
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* 垂直排列 */
+        align-items: center; /* 垂直居中對齊 */
+    }
+
+    .project img {
+        width: 100%; /* 圖片寬度 100% */
+        margin-bottom: 15px; /* 下邊距 */
+    }
+
+    .project-info {
+        flex-direction: column; /* 垂直排列 */
+        text-align: center; /* 文字置中 */
+    }
+}
+
+/* 服務區域樣式 */
+.services {
+    display: flex; /* 使用彈性佈局 */
+    flex-wrap: wrap; /* 當空間不足時換行 */
+    justify-content: space-around; /* 在主軸上平均分配空間 */
+    margin-bottom: 50px; /* 下邊距 */
+}
+
+.service-item {
+    width: 30%; /* 服務項目寬度 30% */
+    text-align: center; /* 文字置中 */
+    margin-bottom: 30px; /* 下邊距 */
+    background-color: #eae6e6; /* 背景顏色 */
+    border-radius: 10px; /* 圓角邊框 */
+    padding: 20px; /* 內邊距 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    transition: transform 1s; /* 設定變換的過渡效果 */
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* 滑鼠懸停時向上移動 */
+}
+
+.service-item i {
+    font-size: 40px !important; /* 設定圖示字體大小 */
+    margin-bottom: 10px; /* 下邊距 */
+    color: #f9a825 !important; /* 設定圖示顏色 */
+}
+
+h3 {
+    font-size: 22px; /* 標題字體大小 */
+    margin-bottom: 10px; /* 下邊距 */
+    color: #00274d; /* 文字顏色 */
+}
+
+/* 置頂按鈕樣式 */
+.scroll-top-btn {
+    position: fixed; /* 固定在視窗 */
+    bottom: 30px; /* 距離視窗底部 30px */
+    right: 30px; /* 距離視窗右側 30px */
+    width: 50px; /* 寬度 50px */
+    height: 50px; /* 高度 50px */
+    background-color: #f9a825; /* 背景顏色 */
+    border-radius: 50%; /* 圓形按鈕 */
+    display: flex; /* 使用彈性佈局 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    cursor: pointer; /* 游標樣式為手型 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 陰影效果 */
+    transition: background-color 0.3s ease-in-out; /* 設定背景顏色變化的過渡效果 */
+}
+
+.scroll-top-btn:hover {
+    background-color: #0056b3; /* 滑鼠懸停時改變背景顏色 */
+}
+
+.scroll-top-btn i {
+    font-size: 24px; /* 圖示字體大小 */
+    color: white; /* 圖示顏色 */
+}
+
+/* Footer 基本樣式 */
+footer {
+    background-color: #00274d; /* 背景顏色 */
+    padding: 30px 0; /* 上下內邊距 30px */
+    color: white; /* 文字顏色 */
+    position: relative; /* 相對定位 */
+}
+
+.footer-content {
+    display: flex; /* 使用彈性佈局 */
+    justify-content: space-around; /* 在主軸上平均分配空間 */
+    align-items: flex-start; /* 在交叉軸上靠上對齊 */
+    flex-wrap: wrap; /* 當空間不足時換行 */
+    max-width: 1200px; /* 最大寬度 1200px */
+    margin: 0 auto; /* 自動左右邊距以居中 */
+}
+
+.footer-section {
+    flex: 1; /* 彈性項目 */
+    min-width: 250px; /* 最小寬度 250px */
+    padding: 20px; /* 內邊距 */
+}
+
+.footer-section h3 {
+    font-size: 18px; /* 標題字體大小 */
+    margin-bottom: 15px; /* 下邊距 */
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px; /* 文字字體大小 */
+    line-height: 1.6; /* 行高 */
+}
+
+.footer-section ul {
+    list-style-type: none; /* 清除列表項目的標記 */
+    padding: 0; /* 清除內邊距 */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* 下邊距 */
+}
+
+.footer-section ul li a {
+    color: white; /* 鏈結顏色 */
+    text-decoration: none; /* 移除下劃線 */
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline; /* 滑鼠懸停時顯示下劃線 */
+}
+
+.footer-bottom {
+    text-align: center; /* 文字置中 */
+    padding: 10px 0; /* 上下內邊距 10px */
+    background-color: #001d3d; /* 背景顏色 */
+    font-size: 14px; /* 字體大小 */
+}
+
+.footer-bottom p {
+    margin: 0; /* 清除外邊距 */
+    font-size: 12px; /* 字體大小 */
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* 導覽列垂直排列 */
+        align-items: center; /* 居中對齊 */
+    }
+
+    .nav-links {
+        flex-direction: column; /* 導覽鏈結垂直排列 */
+    }
+
+    .nav-links li {
+        margin-bottom: 10px; /* 下邊距 */
+    }
+
+    .service-item {
+        width: 100%; /* 服務項目寬度 100% */
+        margin-bottom: 20px; /* 下邊距 */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Footer 內容垂直排列 */
+        align-items: center; /* 居中對齊 */
+    }
+
+    .footer-section {
+        max-width: 90%; /* 最小寬度 90% */
+        text-align: center; /* 文字置中 */
+    }
+}
+
+/* 在更小的屏幕下的樣式 */
+@media (max-width: 480px) {
+    .slide-text {
+        font-size: 24px; /* 幻燈片文字字體大小 */
+    }
+
+    .footer-section {
+        padding: 10px; /* Footer 內邊距 */
+    }
+
+    h2 {
+        font-size: 28px; /* 標題字體大小 */
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <title>大發財海事工程</title>
+    <link rel="stylesheet" href="five.css">
+
+    
+</head>
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/image/logo/logo-Photoroom.png" alt="公司Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/index.html">關於公司</a></li>
+            <li><a href="/two.html">專業服務</a></li>
+            <li><a href="/three.html">優勢實績</a></li>
+            <li><a href="/four.html">船機設備</a></li>
+            <li><a href="/five.html">聯絡我們</a></li>
+            <li><a href="/EnglishFive.html" class="btn">ENGLISH</a></li>
+        </ul>
+    </nav>
+
+    <!-- 新增的內容 -->
+     <main>
+    <div align="center">
+        <h1>如有任何問題，歡迎提問!</h1>
+        <p>寫下你的資料與意見，我們將再與您聯絡。</p>
+        <br>
+        <!-- 輸入框 -->
+        <form action="" method="post" onsubmit="return false;">
+            <input type="text" id="username" name="username" value="" placeholder="姓名" class="BG-Copy" size="40" />
+            <input type="text" id="useremail" name="useremail" value="" placeholder="email" class="BG-Copy" size="40" />
+            <br>
+            <textarea name="feedback" id="feedback" rows="8" cols="80" placeholder="寫下您的意見或提問" class="BG-Copy" style="border:2px #2f3944 solid;"></textarea>
+            <br>
+            <input type="submit"  value="送出" class="Base" id="submitBtn">
+        </form>
+        <p>
+            <!-- 插圖 -->
+            <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*nrdjHLOi3ITqtJo_KLo20w.jpeg" width="300px" alt="Feedback Illustration">
+        </p>
+        <!-- 分隔線hr -->
+        <hr>
+        <br>
+        <caption>
+            <h2><strong>我的歷史紀錄</strong></h2>
+        </caption>
+        <br>
+        <!-- 表格定義 -->
+        <table width="800px" align="center" id='Feedback_table'>
+            <tr>
+                <th width="25%">留言時間</th>
+                <th width="15%">姓名</th>
+                <th width="20%">email</th>
+                <th width="30%">意見內容</th>
+                <th width="10%"></th>
+            </tr>
+        </table>
+    </div>
+</main>
+
+
+    <!-- 頁腳部分 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about-us">
+                <h3>關於我們</h3>
+                <p>大發財海事工程成立於1912年，傳承112年本島環境的海事工程實務經驗，提供客戶專業服務與諮詢。引進新科技與船機設備提高生產力、強化競爭力，並擴充專業工程團隊朝向年輕化、專業科技化發展，掌握時代趨勢為新興業務機會預作投資。</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>網頁連結</h3>
+                <ul>
+                    <li><a href="/index.html">關於公司</a></li>
+                    <li><a href="/two.html">專案服務</a></li>
+                    <li><a href="/three.html">優勢實績</a></li>
+                    <li><a href="/four.html">船機設備</a></li>
+                    <li><a href="/five.html">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h3>聯絡我們</h3>
+                <p>大發財海事工程有限公司</p>
+                <p>TEL: 04-1111-1111</p>
+                <p>FAX: 02-1111-1111</p>
+                <p>Email: service@123.asia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 1912 大發財海事工程有限公司 DFCC Marine Engineering Co., Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="five.js"></script>
+</body>
+</html>
