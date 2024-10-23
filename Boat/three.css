@@ -293,13 +293,16 @@ footer {
 }
 
 .footer-section h3 {
+    color: white;
     font-size: 18px; /* 標題字體大小 */
     margin-bottom: 15px; /* 下邊距 */
+    
 }
 
 .footer-section p,
 .footer-section ul {
     font-size: 14px; /* 文字字體大小 */
+    color: white;
     line-height: 1.6; /* 行高 */
 }
 
